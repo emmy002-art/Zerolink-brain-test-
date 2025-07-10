@@ -1,4 +1,1 @@
-
-document.getElementById('toggle-theme').addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
-});
+console.log('Zerolink Brain Loaded');
