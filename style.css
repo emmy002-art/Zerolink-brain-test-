@@ -1,113 +1,130 @@
-/* Reset default margin and padding */
-body, html {
-  height: 100%;
+body {
   margin: 0;
-  padding: 0;
   font-family: 'Segoe UI', sans-serif;
+  transition: background 0.3s, color 0.3s;
 }
 
-/* Light and dark mode base styles */
-body.light-mode {
-  background-color: #ffffff;
-  color: #333333;
+.light-mode {
+  background: #f5f5f5;
+  color: #111;
 }
 
-body.dark-mode {
-  background-color: #0e0e1a;
-  color: #ffffff;
-  background-image: url("stars-background.png"); /* Optional starry background */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+.dark-mode {
+  background: #0a0a1f url('stars.gif') repeat;
+  color: #eee;
 }
 
-/* Center and balance main content */
-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 70vh;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* Header styles */
-header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.tagline {
-  font-size: 2em;
-  font-weight: bold;
-  margin-bottom: 0.3em;
-}
-
-.greeting {
-  font-size: 1.2em;
-  margin-top: 0;
-}
-
-/* Chatbox section */
-.chatbox {
-  width: 100%;
-  max-width: 600px;
-  margin-top: 20px;
-}
-
-.chat-log {
-  height: 300px;
-  background: #f2f2f2;
-  border-radius: 8px;
-  padding: 15px;
-  overflow-y: auto;
-  margin-bottom: 10px;
-}
-
-.chat-input {
-  width: 100%;
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 160px;
+  height: 100%;
+  background: #222;
+  color: #fff;
   padding: 10px;
-  font-size: 1em;
-  border-radius: 6px;
-  border: 1px solid #ccc;
 }
 
-/* Marquee section */
-.marquee {
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 10px 0;
+}
+
+.header {
+  margin-left: 180px;
+  padding: 20px;
+  text-align: center;
+}
+
+.typing-animation {
   overflow: hidden;
   white-space: nowrap;
-  width: 100%;
-  margin: 20px 0;
+  border-right: 2px solid;
+  animation: typing 3s steps(30) 1;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+.search-bar {
+  width: 60%;
+  padding: 10px;
+  font-size: 1rem;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+.marquee {
+  margin-left: 180px;
+  background: #222;
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .marquee-content {
   display: inline-block;
-  animation: marquee 10s linear infinite;
+  padding: 10px;
+  animation: marquee 15s linear infinite;
 }
 
 .marquee-item {
-  display: inline-block;
-  padding: 0 20px;
-  font-weight: bold;
-  color: #0066cc;
+  margin: 0 15px;
   cursor: pointer;
+}
+
+.premium::after {
+  content: \"★\";
+  color: gold;
+  margin-left: 5px;
 }
 
 @keyframes marquee {
-  from { transform: translateX(100%); }
-  to { transform: translateX(-100%); }
+  0% { transform: translateX(100%) }
+  100% { transform: translateX(-100%) }
 }
 
-/* Theme toggle button */
-#toggle-theme {
-  margin-top: 20px;
-  padding: 8px 16px;
-  font-size: 1em;
-  border-radius: 6px;
-  border: none;
-  background-color: #333;
-  color: white;
+.chatbox {
+  margin-left: 180px;
+  padding: 20px;
+}
+
+.chat-log {
+  height: 300px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background: #fff;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.chat-input {
+  width: 80%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+
+.input-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.voice-btn {
+  padding: 10px;
+  font-size: 1.2rem;
   cursor: pointer;
 }
+
+footer {
+  text-align: center;
+  padding: 20px;
+  }
