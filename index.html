@@ -1,54 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- Zerolink Brain - ChatGPT-Style UI (HTML) --><!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zerolink Brain - Ask Africa Anything</title>
-
-  <!-- Futuristic Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
-
-  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
 <body class="light-mode">
-
-  <header>
-    <!-- Logo -->
-    <img src="logo.png" alt="Zerolink Brain Logo" class="logo" />
-
-    <!-- Greetings -->
-    <h1 class="tagline">Ask Africa Anything</h1>
-    <h2 class="greeting">I'm Zerolink Brain, your AI assistant. How can I help you?</h2>
-
-    <!-- Search bar -->
-    
-  </header>
-
+  <div class="sidebar">
+    <h3>Zerolink Menu</h3>
+    <ul>
+      <li>Dashboard</li>
+      <li>History</li>
+      <li>Premium</li>
+      <li>Settings</li>
+    </ul>
+  </div>
   <main>
-    <!-- Marquee (for phone view) -->
-    <section class="marquee">
-      <div class="marquee-content">
-        <span class="marquee-item">Travel</span>
-        <span class="marquee-item">Electricity</span>
-        <span class="marquee-item">Weather</span>
-        <span class="marquee-item">News</span>
-        <span class="marquee-item">Holidays</span>
-      </div>
-    </section>
+    <header class="header">
+      <h1 class="tagline">Ask Africa Anything</h1>
+      <h2 class="greeting typing-animation">I'm Zerolink Brain, your AI assistant. How can I help you?</h2>
+      <input type="text" class="search-bar" placeholder="Message Zerolink…" />
+    </header><section class="marquee">
+  <div class="marquee-content">
+    <span class="marquee-item premium">Travel</span>
+    <span class="marquee-item premium">Electricity</span>
+    <span class="marquee-item premium">Weather</span>
+    <span class="marquee-item premium">News</span>
+    <span class="marquee-item premium">Holidays</span>
+  </div>
+</section>
 
-    <!-- Chatbox -->
-    <section class="chatbox">
-      <div class="chat-log">
-        <!-- Chat content goes here -->
-      </div>
-      <input type="text" class="chat-input" placeholder="Type your message..." />
-    </section>
+<section class="chatbox">
+  <div class="chat-log" id="chatLog">
+    <!-- Chat bubbles inserted dynamically -->
+  </div>
+  <div class="input-area">
+    <input type="text" id="chatInput" class="chat-input" placeholder="Type your message..." />
+    <button class="voice-btn">🎤</button>
+  </div>
+</section>
+
+<footer>
+  <button id="toggle-theme">Switch Theme</button>
+</footer>
+
   </main>
-
-  <footer>
-    <button id="toggle-theme">Switch Theme</button>
-  </footer>
 </body>
 </html>
