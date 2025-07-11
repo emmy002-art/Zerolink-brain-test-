@@ -128,3 +128,34 @@ footer {
   text-align: center;
   padding: 20px;
   }
+@media (max-width: 768px) {
+  .sidebar {
+    display: none; /* hide sidebar on phones */
+  }
+
+  .header, .chatbox, .marquee {
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  .search-bar {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .chat-input {
+    width: 100%;
+  }
+
+  .marquee-content {
+    animation-duration: 10s;
+  }
+
+  .chat-log {
+    height: 250px;
+  }
+
+  .voice-btn {
+    font-size: 1rem;
+  }
+    }
