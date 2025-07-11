@@ -1,10 +1,7 @@
-document.getElementById('toggle-theme').addEventListener('click', () => {
-  const body = document.body;
-  if (body.classList.contains('light-mode')) {
-    body.classList.remove('light-mode');
-    body.classList.add('dark-mode');
-  } else {
-    body.classList.remove('dark-mode');
-    body.classList.add('light-mode');
-  }
+const toggleBtn = document.getElementById("toggle-theme");
+const body = document.body;
+
+toggleBtn.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+  body.classList.toggle("light-mode");
 });
