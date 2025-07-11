@@ -4,17 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zerolink Brain - Ask Africa Anything</title>
+
+  <!-- Futuristic Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
 <body class="light-mode">
+
   <header>
+    <!-- Logo -->
+    <img src="logo.png" alt="Zerolink Brain Logo" class="logo" />
+
+    <!-- Greetings -->
     <h1 class="tagline">Ask Africa Anything</h1>
     <h2 class="greeting">I'm Zerolink Brain, your AI assistant. How can I help you?</h2>
+
+    <!-- Search bar -->
     <input type="text" class="search-bar" placeholder="Message Zerolink…" />
   </header>
 
   <main>
+    <!-- Marquee (for phone view) -->
     <section class="marquee">
       <div class="marquee-content">
         <span class="marquee-item">Travel</span>
@@ -25,8 +38,11 @@
       </div>
     </section>
 
+    <!-- Chatbox -->
     <section class="chatbox">
-      <div class="chat-log"></div>
+      <div class="chat-log">
+        <!-- Chat content goes here -->
+      </div>
       <input type="text" class="chat-input" placeholder="Type your message..." />
     </section>
   </main>
