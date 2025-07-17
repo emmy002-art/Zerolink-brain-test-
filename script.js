@@ -39,6 +39,7 @@ form.addEventListener("submit", async (e) => {
   output.textContent = "Zerolink Brain Is Thinking...";
 
   try {
+    const usermessage=msg. trim();
     const res = await fetch("https://zerolink-brain-backend-h9nk.onrender.com/ask", {
       method: "POST",
       headers: {
@@ -62,4 +63,31 @@ form.addEventListener("submit", async (e) => {
     console.error("Error:", error);
     output.textContent = "Error talking to Zerolink Brain.";
   }
+});
+const express = require("express");
+const cors = require("cors");
+
+const app = express();
+const port = process.env.PORT || 3000;
+
+// Middlewares
+app.use(cors());
+app.use(express.json());
+
+// Routes
+app.post("/ask", async (req, res) => {
+  const { message } = req.body;
+
+  if (!message) {
+    return res.status(400).json({ error: "Message is required" });
+  }
+
+  // Simulated AI reply
+  const reply = `You said: ${message}`;
+  return res.json({ response: reply });
+});
+
+// Start server
+app.listen(port, () => {
+  console.log(`Zerolink Brain backend is running on port ${port}`);
 });
