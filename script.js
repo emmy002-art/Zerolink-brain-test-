@@ -39,7 +39,7 @@ form.addEventListener("submit", async (e) => {
   output.textContent = "Thinking...";
 
   try {
-    const res = await fetch("https://zerolink-brain-backend-h9nk.onrender.com/", {
+    const res = await fetch("https://emmy002-art.github.io/Zerolink-brain-test-/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
