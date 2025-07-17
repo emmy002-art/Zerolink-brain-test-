@@ -30,13 +30,13 @@ form.addEventListener("submit", async (e) => {
 
   // Show user message in chat log
   const bubble = document.createElement("div");
-  bubble.className = "bubble user";
-  bubble.textContent = msg;
-  chatLog.appendChild(bubble);
+  userbubble.className = "bubble user";
+  userbubble.textContent = msg;
+  chatLog.appendChild(userbubble);
   chatLog.scrollTop = chatLog.scrollHeight;
 
   userInput.value = "";
-  output.textContent = "Thinking...";
+  output.textContent = "Zerolink Brain Is Thinking...";
 
   try {
     const res = await fetch("https://zerolink-brain-backend-h9nk.onrender.com/ask", {
