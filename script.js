@@ -25,7 +25,7 @@ const chatLog = document.getElementById("chatLog");
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  const msg = userInput.value.trim();
+  const msg = Input.value.trim();
   if (!msg) return;
 
   // Show user message in chat log
